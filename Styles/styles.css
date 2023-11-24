@@ -1,0 +1,239 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+body {
+  background-color: rgb(249, 229, 232);
+    }
+    body {
+        background-size: 50px 50px;
+        background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
+        font-family: 'Poiret One';
+        font-weight: bolder;
+      }   
+h2 {
+  display:block;
+  font-size: 1.25em;
+  font-weight: lighter;
+  font-family: 'Press Start 2P';
+}
+h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 2.5rem;
+}
+#biography {
+    background-color: #f8f8f8cc;
+    border-radius: 10pt;
+}
+#topEmpty {
+  height: 20pt;
+  width: 100%;
+}
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  position: fixed;
+  background-color: #e4819b54;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  margin: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: row;
+  font-family: 'Press Start 2P';
+  font-size: 9pt;
+  text-transform: lowercase;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar li {
+  display: flex;
+  flex: auto;
+  justify-content: center;
+}
+
+img.logo {
+  width: 65pt;
+}
+
+.navbar li a {
+  text-decoration: none;
+  justify-content: center;
+  color: #090909;
+  display: block;
+  padding: 12pt 15pt;
+  margin: 0;
+}
+
+div.container {
+  text-align: center;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.container figure {
+  background: white;
+  padding: 2em;
+  padding-bottom: 5em;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 350px; 
+  height: 310px; 
+  border-radius: 10px;
+  margin-right: 40pt; 
+}
+
+.container img.design-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border: 2px solid black; 
+  min-width: 300px; 
+}
+
+figcaption {
+  position: relative;
+  text-align: center;
+  padding-top: 2em;
+  margin: 0;
+}
+.favorites ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+table {
+  width: 30%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f8f8f8cc;
+}
+
+th, td {
+  border: 1px solid #141313;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #e9b8c4d6;
+}
+
+.favorites ul li a {
+  text-decoration: none;
+  position: relative;
+  color: #d82969; 
+  transition: color 0.3s ease-in-out;
+}
+
+
+.favorites ul li a:hover {
+  color: #e1ccc2; 
+}
+.favorites ul li a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; 
+  bottom: 0;
+  left: 0;
+  background-color: #f26881;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.favorites ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+footer {
+  background-color: #e4819bbb; 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center; 
+  border-radius: 10pt;
+}
+#Contact {
+  color: #000000; 
+  padding: 30px; /* Padding for the content inside the contact section */
+  text-align: center;
+  font-weight: bold;
+}
+#Contact a {
+  color: #eb1055; /* link color */
+  text-decoration: none; 
+  align-items: center; 
+  font-weight: bolder;
+}
+
+#Contact a:hover {
+  text-decoration: underline;
+}
+
+/* email icon in the contact section */
+#Contact i {
+  margin-left: 10px; /* Adds spacing between icon and text */
+}
+
+
+/* Styles for smaller screens */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    position: static;
+  }
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .navbar li a {
+    padding: 10px; 
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #090909;
+  }
+
+  #menu-toggle {
+    display: none; 
+  }
+
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+  }
+
+  #menu-toggle:checked + .navbar .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #090909;
+    margin: 6px 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #topEmpty {
+    position: static; 
+    height: auto; 
+    width: auto; 
+  }
+}

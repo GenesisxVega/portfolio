@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenesisVegaGonzalez</title>
+    <link href="./Styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
-    <nav>
-      <a href="#About-Me">About Me</a> |
-      <a href="#Hobbies">Hobbies</a> |
-      <a href="#Goals">Goals</a> |
-      <a href="#Designs">Designs</a> |
-      <a href="#Contact">Contact Me</a> |
-    </nav>
-<h1>Genesis' Portfolio 2023</h1>
-<img src="./images/newlogo.jpg" alt="Genesis Ribbon Logo">
-<section>
-<h2>Biography</h2>
-<h3 id="#About-Me">About Me</h3>
+    <div class="nav-container">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger-menu">
+      </label>
+    
+      <ul class="navbar">
+        <li><a href="#topEmpty"><img src="./images/logocss.png" alt="Genesis Ribbon Logo" class="logo"></a></li>
+        <li><a href="#AboutMe" class="arrow">About Me</a></li>
+        <li><a href="#Hobbies" class="arrow">Hobbies</a></li>
+        <li><a href="#Goals" class="arrow">Goals</a></li>
+        <li><a href="#Designs" class="arrow">Designs</a></li>
+        <li><a href="#Contact" class="arrow">Contact Me</a></li>
+      </ul>
+    </div>
+  <div class="topEmpty" id="topEmpty"></div>
+<section id="biography">
+  <h2 id="AboutMe">About Me</h2>
 <p>Bonjour! Hola! Hello! Welcome to my portfolio. My name is Genesis Vega Gonzalez and I am currently studying UX Design at SAIT. Prior to studying design, I was an elementary school teacher for 2 years. I am hoping that in this new career, my creativity and ingenuity will further blossom. Moreover, I was born in Chile and moved to Canada at the age of 5. I am fluent in French, Spanish, and English. Hopefully, I will be able to work in different parts of the world to utilize my languages.</p>
-</section> 
-  <section>
-<h3 id="Hobbies">Hobbies</h3>
+<h2 id="Hobbies">Hobbies</h2>
 <p>In my free time, you can find me reading, watching movies, and grabbing dinner with my friends.</p>
-<fieldset>
-<legend>Current favorites</legend>
-<ul>
+<fieldset class="favorites">
+  <legend>Current favorites</legend>
+  <ul>
     <li><a href="https://www.goodreads.com/en/book/show/35900387/" target="_blank">📖: Eleanor Oliphant is Completely Fine</a></li>
     <li><a href="https://www.imdb.com/title/tt15339456/" target="_blank">🎞️: Marcel the Shell with Shoes On</a></li>
     <li><a href="https://alforno.ca/" target="_blank">🍝: Alforno Restaurant</a></li>
-</ul>
+  </ul>
 </fieldset>
 <p>You can also occasionally find me on an airplane heading towards a new destination!</p>
 <fieldset>
@@ -54,29 +59,58 @@
  <h2 id="Goals">Goals</h2>
   <p>As a goal-oriented individual, my goals are forever evolving. Currently, I am aiming to work in a creative field such as film or marketing. Video editing and illustrating are both skills that I want to further develop and delve into. I am also hoping to be able to travel for work and discover new cultures.</p>
 </section>
-  <section>
-<h2 id="Designs">Designs</h2>
-<table>
-  <tr>
-    <th>Design 1</th>
-    <th>Design 2</th>
-    <th>Design 3</th>
-  </tr>
-  <tr>
-    <td><img height="300" src="./images/Chico.png" alt="Chico's Big Bash Book Cover" width="250"></td>
-    <td><img height="350" src="./images/strawberry.jpg" alt="parts of strawberry" width="300" style="margin-left: 100px;"></td>
-    <td><img height="400" src="./images/uxdesigngenesisnew.jpg" alt="4 piece puzzle spelling out together" width="350"></td>
-  </tr>
-</table>
+<section>
+  <h2>3 Things I Can't Live Without</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Item</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>My Family</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Air Conditioner</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>My Dog</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
-<!-- FUN FACT: I once played Elvis Presley in a High School play. -->
   <section>
-<h3 id="Contact">Contact Info</h3>
-<address>
-  Click here to send me an email! <a href="mailto:gvega375@mtroyal.ca">Genesis Vega Gonzalez</a>.<br>
+    <h2 id="Designs">Designs</h2>
+    <div class="container">
+      <figure>
+        <img class="design-image" src="./images/Chico.png" alt="Chico's Big Bash Cook Cover">
+        <figcaption>Chico's Big Bash Children's Book Cover</figcaption>
+      </figure>
+      <figure>
+        <img class="design-image" src="./images/strawberry.jpg" alt="Diagram of the Parts of a Strawberry">
+        <figcaption>Diagram of the Parts of a Strawberry</figcaption>
+      </figure>
+      <figure>
+        <img class="design-image" src="./images/uxdesigngenesisnew.jpg" alt="4-piece puzzle spelling out - together">
+        <figcaption>"Together" UX Design Puzzle</figcaption>
+      </figure>
+    </div>
+  </section>
+<!-- FUN FACT: I once played Elvis Presley in a High School play. -->
+<section id="Contact">
+  <h3>Contact Info</h3>
+  <address>
+    Click here to send me an email! <a href="mailto:gvega375@mtroyal.ca">
+      <i class="fas fa-envelope"></i> Genesis Vega Gonzalez
+    </a>
   </address>
   <p>Looking forward to hearing from you!</p>
 </section>
-  <footer>&copy; Copyright 2023 Genesis Vega Gonzalez</footer>
+  <footer> &copy; Copyright 2023 Genesis Vega Gonzalez</footer>
 </body>
 </html>
