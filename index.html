@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenesisVegaGonzalez</title>
     <link href="./Styles/styles.css" rel="stylesheet">
+    <script async src="JS2/javascript.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
@@ -12,7 +13,6 @@
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="hamburger-menu">
       </label>
-    
       <ul class="navbar">
         <li><a href="#topEmpty"><img src="./images/logocss.png" alt="Genesis Ribbon Logo" class="logo"></a></li>
         <li><a href="#AboutMe" class="arrow">About Me</a></li>
@@ -54,6 +54,12 @@
   </ul>
   </fieldset>
 </section>
+<section id="incrementButton">
+  <!-- Incrementing Button -->
+  <h2>Click the Heart!</h2>
+  <button id="btn-counter" onclick="incrementButton()">💖</button>
+  <p id="txt-counter">Number:1</p>
+</section>
 <!--Why can't you hear a pterodactyl going to the bathroom? A: Because the "P" is silent. -->
   <section>
  <h2 id="Goals">Goals</h2>
@@ -84,6 +90,9 @@
     </tbody>
   </table>
 </section>
+<div>
+  <button id="btn-alert" class="button-56" onclick="myButton()">🍰🍫☕️ Click Me for a Pick-Me-Up!</button>
+</div>
   <section>
     <h2 id="Designs">Designs</h2>
     <div class="container">
@@ -101,6 +110,10 @@
       </figure>
     </div>
   </section>
+  <div class="container" id="zebra">
+    <ol id="numbers">
+    </ol>
+  </div>
 <!-- FUN FACT: I once played Elvis Presley in a High School play. -->
 <section id="Contact">
   <h3>Contact Info</h3>
@@ -111,6 +124,6 @@
   </address>
   <p>Looking forward to hearing from you!</p>
 </section>
-  <footer> &copy; Copyright 2023 Genesis Vega Gonzalez</footer>
+  <footer id="footer"></footer>
 </body>
 </html>
