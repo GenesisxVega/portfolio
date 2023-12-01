@@ -49,6 +49,7 @@ h2 {
   list-style-type: none;
   padding: 0;
   align-items: center;
+  z-index: 2;
 }
 
 .navbar li {
@@ -75,7 +76,6 @@ div.container {
   display: flex;
   overflow-x: scroll;
 }
-
 .container figure {
   background: white;
   padding: 2em;
@@ -127,42 +127,30 @@ th {
 
 .favorites ul li a {
   text-decoration: none;
-  position: relative;
+  position: static;
   color: #d82969; 
   transition: color 0.3s ease-in-out;
 }
 
-
 .favorites ul li a:hover {
   color: #e1ccc2; 
 }
-.favorites ul li a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px; 
-  bottom: 0;
-  left: 0;
-  background-color: #f26881;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
+
 .favorites ul li a:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
 footer {
   background-color: #e4819bbb; 
-  color: #fff; 
+  color: #fff;
   padding: 20px; 
   text-align: center; 
   border-radius: 10pt;
 }
 #Contact {
   color: #000000; 
-  padding: 30px; /* Padding for the content inside the contact section */
   text-align: center;
+  padding-bottom: 20px;
   font-weight: bold;
 }
 #Contact a {
@@ -180,8 +168,100 @@ footer {
 #Contact i {
   margin-left: 10px; /* Adds spacing between icon and text */
 }
+ /* credit to Squareshot */
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  margin: auto;
+  width: auto;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
 
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
 
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+#incrementButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10pt 0;
+  margin-bottom: -20pt;
+    font-family: 'Poiret One';
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: #fdfbf5a4;
+    border-radius: 15pt;
+}
+#btn-counter {
+margin-top: 10pt;
+margin-bottom: -10pt;
+font-size:xx-large ;
+
+}
+.even {
+  color: palevioletred;
+}
+.odd {
+  color: blue;
+}
+#numbers li{
+  border: #000000 dotted 2px;
+  padding: 40px;
+  margin: 30px;
+  font-weight: bolder;
+}
+#numbers li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#numbers {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: bolder;
+}
+#zebra {
+  max-height: 50vh; 
+  overflow-y: auto; 
+}
 /* Styles for smaller screens */
 
 @media screen and (max-width: 768px) {
@@ -235,5 +315,10 @@ footer {
     position: static; 
     height: auto; 
     width: auto; 
+  }
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
   }
 }
