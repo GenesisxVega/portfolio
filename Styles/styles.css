@@ -1,9 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+.navbar li a:focus {
+  outline: 2px solid #4CAF50; 
+  background-color: rgba(112, 145, 98, 0.874);
+}
+
 body {
   background-color: rgb(249, 229, 232);
     }
     body {
+      color: #090909;
         background-size: 50px 50px;
         background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
         font-family: 'Poiret One';
@@ -21,7 +28,7 @@ h2 {
   padding-top: 2.5rem;
 }
 #biography {
-    background-color: #f8f8f8cc;
+    background-color: #f8f8f8;
     border-radius: 10pt;
 }
 #topEmpty {
@@ -112,7 +119,7 @@ table {
   width: 30%;
   margin: 20px auto;
   border-collapse: collapse;
-  background-color: #f8f8f8cc;
+  background-color: #f8f8f8;
 }
 
 th, td {
@@ -122,18 +129,18 @@ th, td {
 }
 
 th {
-  background-color: #e9b8c4d6;
+  background-color: #f3839fd6;
 }
 
 .favorites ul li a {
   text-decoration: none;
   position: static;
-  color: #d82969; 
+  color: #ea1248d6; 
   transition: color 0.3s ease-in-out;
 }
 
 .favorites ul li a:hover {
-  color: #e1ccc2; 
+  color: rgba(61, 160, 16, 0.874); 
 }
 
 .favorites ul li a:hover::before {
@@ -168,10 +175,13 @@ footer {
 #Contact i {
   margin-left: 10px; /* Adds spacing between icon and text */
 }
+#Contact a:focus {
+  text-decoration: underline;
+}
  /* credit to Squareshot */
 .button-56 {
   align-items: center;
-  background-color: #fee6e3;
+  background-color: #f291a9;
   border: 2px solid #111;
   border-radius: 8px;
   color: #111;
@@ -210,13 +220,27 @@ footer {
 }
 
 .button-56:active {
-  background-color: #ffdeda;
+  background-color: hsl(6, 100%, 93%);
   outline: 0;
 }
 
 .button-56:hover {
   outline: 0;
 }
+.button-56:focus:after {
+  transform: translate(0, 0);
+}
+
+.button-56:focus {
+  background-color: hsl(6, 100%, 93%);
+  outline: 0;
+  transition: background-color 0.3s ease-out; /* Adjust the transition duration as needed */
+}
+
+.button-56:focus:after {
+  transition: transform 0.5s ease-out; /* Adjust the transition duration as needed */
+}
+
 #incrementButton {
   display: flex;
   flex-direction: column;
@@ -227,7 +251,7 @@ footer {
     font-family: 'Poiret One';
     font-size: 2rem;
     font-weight: bolder;
-    background-color: #fdfbf5a4;
+    background-color: #f8f8f8;
     border-radius: 15pt;
 }
 #btn-counter {

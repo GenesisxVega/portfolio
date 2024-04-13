@@ -31,6 +31,7 @@ function incrementButton() {
         document.getElementById('txt-counter').classList.add('odd');
     }
 }
+
 const numbersList = document.getElementById('numbers');
 for (let i=1; i <= 100; i = i + 1) {
     const listItem = document.createElement ('li');
@@ -42,3 +43,11 @@ for (let i=1; i <= 100; i = i + 1) {
     }
     numbersList.appendChild(listItem);
 }
+document.getElementById('btn-counter').addEventListener('click', incrementButton);
+
+document.getElementById('btn-counter').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        incrementButton();
+    }
+});
